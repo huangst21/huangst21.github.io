@@ -75,7 +75,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2610.28578">报告</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Sage-A1.5">模型</a></div>
             <p class="paper-meta">技术报告 · <time datetime="2026-10">2026.10</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">Sage-A1.5 是一个 35B 混合专家模型，将子任务分派给上下文隔离的子智能体并行执行，并通过进度检查和证据验证修正搜索策略。启用子智能体编排后，同一模型的 DeepResearch Bench II 得分从 43.7 升至 47.5，BrowseComp 准确率从 81.7% 升至 82.8%。</p>
+            <p class="paper-description">Sage-A1.5 是一个 35B 混合专家模型，由上下文隔离的子智能体并行处理子任务。模型通过检查进度和验证证据调整搜索策略。启用子智能体编排后，同一模型的 DeepResearch Bench II 得分从 43.7 升至 47.5，BrowseComp 准确率从 81.7% 升至 82.8%。</p>
           </div>
         </article>
         <article class="paper featured" id="longharness" data-category="first" aria-labelledby="longharness-title">
@@ -90,7 +90,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2610.13075">论文</a></div>
             <p class="paper-meta">arXiv · <time datetime="2026-10">2026.10</time></p>
-            <p class="paper-description">LongHarness 面向超出模型上下文窗口的语料级推理，将检索得到的证据和不断修订的结论作为显式状态维护。结论中的证据缺口引导后续检索，新证据反过来补强或修正结论，证据生命周期管理则让更新可追溯。使用同一 GLM-5.3-Flash 模型时，LongHarness 在 OfficeQA Pro V1 和 V2 上的精确匹配率分别为 60.2% 和 61.1%，高于 Codex 的 46.6% 和 42.2%，以及 Claude Code 的 48.1% 和 35.6%。</p>
+            <p class="paper-description">LongHarness 显式维护证据和结论，以支持超出上下文窗口的推理。结论中的证据缺口引导检索，新证据反过来更新结论。同用 GLM-5.3-Flash 时，OfficeQA Pro V1/V2 的精确匹配率分别为 LongHarness 60.2%/61.1%、Codex 46.6%/42.2%、Claude Code 48.1%/35.6%。</p>
           </div>
         </article>
         <article class="paper" id="agents" data-category="report" aria-labelledby="agents-title">
@@ -105,7 +105,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2606.30616">报告</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Agents-A1">项目</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Agents-A1">模型</a></div>
             <p class="paper-meta">技术报告 · <time datetime="2026-06">2026.06</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">Agents-A1 是一个 35B 混合专家模型，使用平均 45K token 的长程交互轨迹训练，并通过按领域路由的多教师在策略蒸馏，将六个领域的专长整合到同一个模型中。在 IFBench 上，Agents-A1 得 80.6 分，Kimi-K2.6 得 71.8 分，DeepSeek-V4-Pro（Max）得 73.5 分。</p>
+            <p class="paper-description">Agents-A1 是一个 35B 混合专家模型，使用平均 45K token 的交互轨迹训练。它通过按领域路由的多教师在策略蒸馏，整合六个领域的专长。IFBench 上，Agents-A1 得 80.6 分，Kimi-K2.6 和 DeepSeek-V4-Pro（Max）分别得 71.8 和 73.5 分。</p>
           </div>
         </article>
         <article class="paper" id="scicoe" data-category="other" aria-labelledby="scicoe-title">
@@ -120,7 +120,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2602.12164">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Sci-CoE">代码</a></div>
             <p class="paper-meta">arXiv · <time datetime="2026-02">2026.02</time></p>
-            <p class="paper-description">Sci-CoE 面向缺乏可验证反馈的科学推理任务，先用少量标注建立验证器的判断基础，再以兼顾共识、可靠性和多样性的几何奖励，在无标注数据上联合训练求解器与验证器。在论文 v2 的 GPQA-Diamond 评测中，Qwen3-8B 经第二阶段训练后，准确率从 61.62% 升至 65.66%。</p>
+            <p class="paper-description">Sci-CoE 先用少量标注数据训练科学推理验证器。随后用兼顾共识、可靠性和多样性的几何奖励，在无标注数据上联合训练求解器与验证器。论文 v2 中，第二阶段训练将 Qwen3-8B 的 GPQA-Diamond 准确率从 61.62% 提高到 65.66%。</p>
           </div>
         </article>
         <article class="paper" id="internagent" data-category="report" aria-labelledby="internagent-title">
@@ -135,7 +135,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2602.08990">报告</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/InternAgent">项目</a></div>
             <p class="paper-meta">技术报告 · <time datetime="2026-02">2026.02</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">InternAgent-1.5 将生成、验证与演化组织成三个协同子系统，以深度调研、方案优化和长程记忆支持持续迭代。在 SGI-Bench 的 Deep Research 任务上，搭载 Gemini-3-Pro 和 o4-mini 的 InternAgent-1.5 得分为 37.74%，单独使用 Gemini-3-Pro 的对照为 18.48%。</p>
+            <p class="paper-description">InternAgent-1.5 将生成、验证与演化整合到同一个科研框架中。深度调研、方案优化与长程记忆支持持续迭代。SGI-Bench Deep Research 上，搭载 Gemini-3-Pro 和 o4-mini 的 InternAgent-1.5 得分为 37.74%，单用 Gemini-3-Pro 为 18.48%。</p>
           </div>
         </article>
         <article class="paper" id="landscape" data-category="other" aria-labelledby="landscape-title">
@@ -150,7 +150,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2509.02547">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers">文献列表</a></div>
             <p class="paper-meta">arXiv · <time datetime="2025-09">2025.09</time></p>
-            <p class="paper-description">这篇综述以部分可观测马尔可夫决策过程刻画大模型智能体的多步交互，并按核心能力与应用领域两个维度梳理 500 余项研究。文章覆盖规划、工具调用、记忆和自我改进等能力，并汇总开源环境、基准和训练框架。</p>
+            <p class="paper-description">这篇综述用部分可观测马尔可夫决策过程刻画智能体交互。文章按核心能力和应用领域梳理相关方法。综述覆盖 500 余项研究，并汇总开源环境、基准和训练框架。</p>
           </div>
         </article>
         <article class="paper" id="internagent-original" data-category="other" aria-labelledby="internagent-original-title">
@@ -165,7 +165,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2505.16938">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/Alpha-Innovator/NovelSeek">代码</a></div>
             <p class="paper-meta">arXiv · <time datetime="2025-05">2025.05</time></p>
-            <p class="paper-description">InternAgent 是一个连接研究假设、方法设计与实验验证的闭环多智能体框架，允许领域专家在端到端流程中提供反馈。论文评估了 12 类科研任务，其中二维语义分割任务 Auto2DSeg 的最佳方案将 DeepLabV3+ 基线的 mIoU 从 78.8% 提高到 81.0%。</p>
+            <p class="paper-description">InternAgent 将假设生成、方法设计和实验验证串成多智能体闭环。领域专家可在整个流程中提供反馈。论文评估了 12 类任务，其中 Auto2DSeg 的最佳方案将 DeepLabV3+ 的 mIoU 从 78.8% 提高到 81.0%。</p>
           </div>
         </article>
         <article class="paper featured" id="rewardcode" data-category="first" aria-labelledby="rewardcode-title">
@@ -180,7 +180,7 @@
             </div>
             <div class="paper-links"><a href="https://aclanthology.org/2026.findings-emnlp.448/">论文</a></div>
             <p class="paper-meta">Findings of EMNLP 2026</p>
-            <p class="paper-description">RewardCode 将基于准则的评分与可执行单元测试结合，用 CodePair-18K 中的代码偏好对和单元测试训练通用代码奖励模型，并用 Pairwise-GRPO 联合优化评分与测试生成。在 RewardBench-Code 上，RewardCode-7B 的偏好选择准确率为 94.9%，RM-R1-Qwen2.5-Inst-7B 为 88.8%。</p>
+            <p class="paper-description">RewardCode 从 CodePair-18K 学习按准则评分和生成可执行单元测试。Pairwise-GRPO 联合优化这两项能力。RewardBench-Code 上，RewardCode-7B 的偏好选择准确率为 94.9%，RM-R1-Qwen2.5-Inst-7B 为 88.8%。</p>
           </div>
         </article>
         <article class="paper featured" id="timekan" data-category="first" aria-labelledby="timekan-title">
@@ -195,7 +195,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2502.06910">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/huangst21/TimeKAN">代码</a></div>
             <p class="paper-meta">ICLR 2025</p>
-            <p class="paper-description">TimeKAN 以级联分解提取各频带的表示，用多阶 Kolmogorov–Arnold 网络分别建模，再融合各频带的预测。在 ETTh1 上，对 96、192、336 和 720 步预测取平均，TimeKAN 的 MSE 为 0.417，MAE 为 0.427，TimeMixer 的对应数值为 0.459 和 0.444。</p>
+            <p class="paper-description">TimeKAN 用级联分解提取各频带的表示。它用多阶 Kolmogorov–Arnold 网络分别建模，再融合各频带的预测。在 ETTh1 的四个预测步长上，TimeKAN 的平均 MSE/MAE 为 0.417/0.427，TimeMixer 为 0.459/0.444。</p>
           </div>
         </article>
       </div>

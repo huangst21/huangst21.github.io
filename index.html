@@ -75,7 +75,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2610.28578">Report</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Sage-A1.5">Model</a></div>
             <p class="paper-meta">Technical Report · <time datetime="2026-10">2026.10</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">Sage-A1.5 is a 35B mixture-of-experts model that runs subtasks in parallel using subagents with separate contexts. It monitors progress and checks evidence to revise its search strategy. Enabling subagent orchestration with the same model raised its DeepResearch Bench II score from 43.7 to 47.5 and its BrowseComp accuracy from 81.7% to 82.8%.</p>
+            <p class="paper-description">Sage-A1.5 is a 35B mixture-of-experts model that delegates parallel subtasks to subagents with separate contexts. It uses progress checks and evidence verification to refine its search. Subagent orchestration raised the same model’s DeepResearch Bench II score from 43.7 to 47.5 and BrowseComp accuracy from 81.7% to 82.8%.</p>
           </div>
         </article>
         <article class="paper featured" id="longharness" data-category="first" aria-labelledby="longharness-title">
@@ -90,7 +90,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2610.13075">Paper</a></div>
             <p class="paper-meta">arXiv · <time datetime="2026-10">2026.10</time></p>
-            <p class="paper-description">LongHarness supports reasoning over corpora that exceed the model’s context window by explicitly maintaining retrieved evidence and evolving conclusions. Gaps in the current conclusions guide what to retrieve next, and new evidence strengthens or revises those conclusions. Tracking the evidence lifecycle makes updates traceable. With the same GLM-5.3-Flash model, exact match on OfficeQA Pro V1 and V2 was 60.2% and 61.1% for LongHarness, 46.6% and 42.2% for Codex, and 48.1% and 35.6% for Claude Code, respectively.</p>
+            <p class="paper-description">LongHarness maintains evidence and conclusions as explicit state for reasoning beyond the context window. Gaps in the conclusions guide retrieval, and new evidence updates those conclusions. With GLM-5.3-Flash, exact match on OfficeQA Pro V1/V2 was 60.2%/61.1% for LongHarness, 46.6%/42.2% for Codex, and 48.1%/35.6% for Claude Code.</p>
           </div>
         </article>
         <article class="paper" id="agents" data-category="report" aria-labelledby="agents-title">
@@ -105,7 +105,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2606.30616">Report</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Agents-A1">Project</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Agents-A1">Model</a></div>
             <p class="paper-meta">Technical Report · <time datetime="2026-06">2026.06</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">Agents-A1 is a 35B mixture-of-experts model trained on long-horizon interaction trajectories averaging 45K tokens. It combines expertise from six domains in a single model through domain-routed, multi-teacher on-policy distillation. On IFBench, Agents-A1 scored 80.6, compared with 71.8 for Kimi-K2.6 and 73.5 for DeepSeek-V4-Pro (Max).</p>
+            <p class="paper-description">Agents-A1 is a 35B mixture-of-experts model trained on interaction trajectories averaging 45K tokens. Domain-routed, multi-teacher on-policy distillation combines expertise from six domains. On IFBench, it scored 80.6 versus 71.8 for Kimi-K2.6 and 73.5 for DeepSeek-V4-Pro (Max).</p>
           </div>
         </article>
         <article class="paper" id="scicoe" data-category="other" aria-labelledby="scicoe-title">
@@ -120,7 +120,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2602.12164">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Sci-CoE">Code</a></div>
             <p class="paper-meta">arXiv · <time datetime="2026-02">2026.02</time></p>
-            <p class="paper-description">Sci-CoE addresses scientific reasoning tasks where verifiable feedback is scarce. It first trains a verifier on a small labeled set, then uses a geometric reward that balances consensus, reliability, and diversity to jointly train the solver and verifier on unlabeled data. In the GPQA-Diamond evaluation reported in v2, Qwen3-8B accuracy rose from 61.62% to 65.66% after the second training stage.</p>
+            <p class="paper-description">Sci-CoE first trains a verifier on a small labeled set for scientific reasoning. It then jointly trains the solver and verifier on unlabeled data using a geometric reward that balances consensus, reliability, and diversity. In v2, the second stage raised Qwen3-8B accuracy on GPQA-Diamond from 61.62% to 65.66%.</p>
           </div>
         </article>
         <article class="paper" id="internagent" data-category="report" aria-labelledby="internagent-title">
@@ -135,7 +135,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2602.08990">Report</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/InternAgent">Project</a></div>
             <p class="paper-meta">Technical Report · <time datetime="2026-02">2026.02</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
-            <p class="paper-description">InternAgent-1.5 organizes generation, verification, and evolution into three cooperating subsystems. Deep research, refinement of candidate solutions, and long-horizon memory support iterative improvement. On the SGI-Bench Deep Research task, InternAgent-1.5 using Gemini-3-Pro and o4-mini scored 37.74%, compared with 18.48% for Gemini-3-Pro alone.</p>
+            <p class="paper-description">InternAgent-1.5 combines generation, verification, and evolution in a research framework. Deep research, solution refinement, and long-horizon memory support iteration. On SGI-Bench Deep Research, it scored 37.74% with Gemini-3-Pro and o4-mini versus 18.48% for Gemini-3-Pro alone.</p>
           </div>
         </article>
         <article class="paper" id="landscape" data-category="other" aria-labelledby="landscape-title">
@@ -150,7 +150,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2509.02547">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers">Reading List</a></div>
             <p class="paper-meta">arXiv · <time datetime="2025-09">2025.09</time></p>
-            <p class="paper-description">This survey frames multi-step interaction by LLM agents as a partially observable Markov decision process. It organizes more than 500 studies by core capability and application domain, covering planning, tool use, memory, and self-improvement. It also catalogs open-source environments, benchmarks, and training frameworks.</p>
+            <p class="paper-description">The survey models agent interaction as a partially observable Markov decision process. It classifies work by core capability and application domain. It covers over 500 studies and catalogs open-source environments, benchmarks, and training frameworks.</p>
           </div>
         </article>
         <article class="paper" id="internagent-original" data-category="other" aria-labelledby="internagent-original-title">
@@ -165,7 +165,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2505.16938">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/Alpha-Innovator/NovelSeek">Code</a></div>
             <p class="paper-meta">arXiv · <time datetime="2025-05">2025.05</time></p>
-            <p class="paper-description">InternAgent is a closed-loop multi-agent framework that connects hypothesis formation, method design, and experimental validation, with domain experts able to provide feedback throughout. The paper evaluates 12 types of research tasks. On Auto2DSeg, a 2D semantic segmentation task, the best solution improved the DeepLabV3+ baseline mIoU from 78.8% to 81.0%.</p>
+            <p class="paper-description">InternAgent links hypothesis formation, method design, and experimental validation in a closed multi-agent loop. Domain experts can provide feedback throughout the workflow. Across 12 task types evaluated, one example was Auto2DSeg, where the best solution raised DeepLabV3+ mIoU from 78.8% to 81.0%.</p>
           </div>
         </article>
         <article class="paper featured" id="rewardcode" data-category="first" aria-labelledby="rewardcode-title">
@@ -180,7 +180,7 @@
             </div>
             <div class="paper-links"><a href="https://aclanthology.org/2026.findings-emnlp.448/">Paper</a></div>
             <p class="paper-meta">Findings of EMNLP 2026</p>
-            <p class="paper-description">RewardCode combines rubric-based scoring with executable unit tests. It trains a general-purpose code reward model on the code preference pairs and unit tests in CodePair-18K and jointly optimizes scoring and test generation with Pairwise-GRPO. On RewardBench-Code, RewardCode-7B achieved 94.9% preference selection accuracy, compared with 88.8% for RM-R1-Qwen2.5-Inst-7B.</p>
+            <p class="paper-description">RewardCode learns rubric-based scoring and executable unit test generation from CodePair-18K. Pairwise-GRPO jointly optimizes both skills. On RewardBench-Code, RewardCode-7B achieved 94.9% preference selection accuracy versus 88.8% for RM-R1-Qwen2.5-Inst-7B.</p>
           </div>
         </article>
         <article class="paper featured" id="timekan" data-category="first" aria-labelledby="timekan-title">
@@ -195,7 +195,7 @@
             </div>
             <div class="paper-links"><a href="https://arxiv.org/abs/2502.06910">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/huangst21/TimeKAN">Code</a></div>
             <p class="paper-meta">ICLR 2025</p>
-            <p class="paper-description">TimeKAN uses cascaded decomposition to extract representations for different frequency bands, models them with multi-order Kolmogorov–Arnold networks, and combines the band-level forecasts. On ETTh1, averaged over 96-, 192-, 336-, and 720-step forecast horizons, TimeKAN achieved an MSE of 0.417 and an MAE of 0.427, compared with 0.459 and 0.444 for TimeMixer.</p>
+            <p class="paper-description">TimeKAN uses cascaded decomposition to extract frequency-band representations. It models the bands with multi-order Kolmogorov–Arnold networks and combines their forecasts. On ETTh1, mean MSE/MAE across four forecast horizons was 0.417/0.427 for TimeKAN versus 0.459/0.444 for TimeMixer.</p>
           </div>
         </article>
       </div>
