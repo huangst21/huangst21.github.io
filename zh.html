@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Songtao Huang（黄松涛）的学术主页。研究关注长程智能体、面向现实场景的 Work Agent，以及智能体与训练环境的递归自我改进。">
+  <meta name="theme-color" content="#ffffff">
+  <title>Songtao Huang（黄松涛）</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="homepage.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about">跳到正文</a>
+
+  <nav class="section-nav" aria-label="页面导航">
+    <a href="#about" aria-current="location">简介</a>
+    <a href="#news">动态</a>
+    <a href="#publications">成果</a>
+    <a href="#experience">经历</a>
+  </nav>
+
+  <main class="page">
+    <nav class="language-switch" aria-label="页面语言">
+      <span aria-current="page">中文</span>
+      <a href="./index.html" lang="en" hreflang="en">English</a>
+    </nav>
+    <header class="profile" id="about">
+      <div class="profile-content">
+        <h1><span lang="en">Songtao Huang</span><span lang="zh-CN">（黄松涛）</span></h1>
+        <p>你好，欢迎来到我的学术主页！我是复旦大学二年级博士生，导师是 <span lang="en">Wanli Ouyang</span>。我有幸在上海人工智能实验室开展研究，并与 <span lang="en">Shiyang Feng</span> 和 <span lang="en">Bo Zhang</span> 密切合作。</p>
+        <p class="bio">我目前感兴趣的是探索如何提升智能体在长程任务中的表现，尤其是 Work Agent 等能够为现实工作带来生产力提升的应用方向。我也关注智能体与训练环境的递归自我改进（RSI），探索二者如何在持续迭代中相互促进。</p>
+        <div class="profile-links" aria-label="联系方式与个人链接">
+          <a href="mailto:huangsongtao@pjlab.org.cn">邮件<span class="email-address">huangsongtao@pjlab.org.cn</span></a>
+          <span aria-hidden="true">/</span>
+          <a href="https://scholar.google.com/citations?user=_vXl5VAAAAAJ">Google Scholar</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/huangst21">GitHub</a>
+        </div>
+      </div>
+      <img class="profile-photo" src="media/profile-photo.webp" alt="Songtao Huang（黄松涛）的个人照片" width="840" height="521">
+    </header>
+
+    <section class="section" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">近期动态</h2>
+      <ul class="news-list">
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#rewardcode">RewardCode</a> 发表于 <strong>Findings of EMNLP 2026</strong>，用成对强化学习训练能够评分和生成可执行单元测试的通用代码奖励模型。</span></li>
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#sage">Sage-A1.5</a> 发布，展示了 35B 智能体如何通过自适应组合任务编排与验证能力，将长程任务执行扩展到开放式科学探索。</span></li>
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#longharness">LongHarness</a> 发布预印本，通过证据与结论的协同更新，支持智能体在超出上下文窗口的亿级 token 语料上推理。</span></li>
+        <li><time datetime="2026-06">2026.06</time> <span><a href="#agents">Agents-A1</a> 发布，通过扩展交互轨迹和蒸馏六个领域的专长，使 35B 模型在多项长程基准上达到万亿参数模型的水平。</span></li>
+        <li><time datetime="2026-02">2026.02</time> <span><a href="#internagent">InternAgent-1.5</a> 发布，将生成、验证与演化整合到同一框架，支持从算法设计到实证发现的端到端科研。</span></li>
+        <li><time datetime="2025-05">2025.05</time> <span><a href="#internagent-original">InternAgent</a> 发布预印本，在 12 类科研任务中验证了支持专家反馈的闭环多智能体框架。</span></li>
+        <li><time datetime="2025-01">2025.01</time> <span><a href="#timekan">TimeKAN</a> 被 <strong>ICLR 2025</strong> 接收。</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">论文成果</h2>
+      <p class="publications-intro"><mark>浅黄色</mark>为第一作者论文。完整列表见 <a href="https://scholar.google.com/citations?user=_vXl5VAAAAAJ">Google Scholar</a>。</p>
+      <div class="filters" role="group" aria-label="按成果类型筛选" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">全部<span class="tag-count" aria-hidden="true">9</span></button>
+        <button type="button" data-filter="first" aria-pressed="false">第一作者<span class="tag-count" aria-hidden="true">3</span></button>
+        <button type="button" data-filter="report" aria-pressed="false">核心贡献报告<span class="tag-count" aria-hidden="true">3</span></button>
+      </div>
+      <p id="filter-status" class="sr-only" role="status"></p>
+      <div class="paper-list">
+        <article class="paper" id="sage" data-category="report" aria-labelledby="sage-title">
+          <a class="paper-image" href="media/sage.webp">
+            <img src="media/sage.webp" alt="Sage-A1.5 的三阶段训练流程" width="1800" height="960" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="sage-title" lang="en"><a href="https://arxiv.org/abs/2610.28578">Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="sage-authors" lang="en">Wenjie Lou, Tianshuo Peng, Shiyang Feng, Shengji Tang, Runmin Ma, Ruizhe Chen, Jinxin Shi, Haoyang Peng, Fangchen Yu, Zhijie Zhong, Yuhao Zhou, Yue Fan, Yixin Chen, Yiming Wu, Yiheng Wang, Yigeng Jiang, Yichen Jiang, Yi Xie, Xu Guo, Xiaohan He, Tao Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Siyu Zhou, Shuaiyu Zhang, Shangheng Du, Qinglong Cao, Kun Li, Jingqi Ye, Hongbin Zhou, Guohang Yan, Zongsheng Cao, Ziyi Wang, Zhuo Liu, Zhiyin Yu, Zhiwang Zhou, Zelin Tan, Yuqing Zhu, Yaoze Zhang, Yang Chen, Xuming He, Xiuliang Liang, Xingjian Guo, Xiang Zhuang, Weiping Shen, Weida Wang, Tianyuan Zhou, Tianlin Ye, Tengyuan Fan, Siyu Yan, Shuo Li, Shuchen Pu, Shengyuan Xu, Shao Zhang, Ran Wei, Qinyuan Qin, Qingyu Yang, Nianchen Deng, Meng Dai, Kuikun Liu, Kaitao Chen, Juncheng Xiao, Jiangning Liu, Jianbiao Mei, Jia Yu, Haonan He, Hangfan Zhang, Cheng Yang, Chen Zhang, Bihao Zhan, Benteng Cheng, Yuqiang Li, Yihao Liu, Yang Yang, Xujun Fu, Xiaosong Wang, Xiangyu Yue, Wenwei Zhang, Shuyue Hu, Pinlong Cai, Mianxin Liu, Lei Bai, Jie Zhou, Jie Hou, Jiamin Wu, Hui Wang, Haijun Li, Guangyu Wang, Dongzhan Zhou, Chunfeng Song, Chao Yang, Biqing Qi, Xing Xie, Dahua Lin, Bowen Zhou, Xiangchao Yan, Wenlong Zhang, Shufei Zhang, Peng Ye, Bo Zhang</p>
+              <button class="author-toggle" type="button" aria-controls="sage-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2610.28578">报告</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Sage-A1.5">模型</a></div>
+            <p class="paper-meta">技术报告 · <time datetime="2026-10">2026.10</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">Sage-A1.5 是一个 35B 混合专家模型，将子任务分派给上下文隔离的子智能体并行执行，并通过进度检查和证据验证修正搜索策略。启用子智能体编排后，同一模型的 DeepResearch Bench II 得分从 43.7 升至 47.5，BrowseComp 准确率从 81.7% 升至 82.8%。</p>
+          </div>
+        </article>
+        <article class="paper featured" id="longharness" data-category="first" aria-labelledby="longharness-title">
+          <a class="paper-image" href="media/longharness-figure-2.webp">
+            <img src="media/longharness-figure-2.webp" alt="LongHarness Figure 2，证据库与结论状态的协同更新框架" width="1912" height="1160" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="longharness-title" lang="en"><a href="https://arxiv.org/abs/2610.13075">LongHarness: Advancing Agentic Reasoning over 100M-Token Corpora via Stateful Evidence Management</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="longharness-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zhijie Zhong, Xiaohan He, Shuaiyu Zhang, Zhiyin Yu, Li Kang, Heng Zhou, Yutao Fan, Xiangchao Yan, Bo Zhang, Shiyang Feng</p>
+              <button class="author-toggle" type="button" aria-controls="longharness-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2610.13075">论文</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2026-10">2026.10</time></p>
+            <p class="paper-description">LongHarness 面向超出模型上下文窗口的语料级推理，将检索得到的证据和不断修订的结论作为显式状态维护。结论中的证据缺口引导后续检索，新证据反过来补强或修正结论，证据生命周期管理则让更新可追溯。使用同一 GLM-5.3-Flash 模型时，LongHarness 在 OfficeQA Pro V1 和 V2 上的精确匹配率分别为 60.2% 和 61.1%，高于 Codex 的 46.6% 和 42.2%，以及 Claude Code 的 48.1% 和 35.6%。</p>
+          </div>
+        </article>
+        <article class="paper" id="agents" data-category="report" aria-labelledby="agents-title">
+          <a class="paper-image" href="media/agents.webp">
+            <img src="media/agents.webp" alt="Agents-A1 的多领域教师训练和蒸馏流程" width="1800" height="1008" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="agents-title" lang="en"><a href="https://arxiv.org/abs/2606.30616">Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="agents-authors" lang="en">Lei Bai, Zongsheng Cao, Yang Chen, Zhiyao Cui, Shangheng Du, Yue Fan, Shiyang Feng, Zijie Guo, Haonan He, Liang He, Xiaohan He, Shuyue Hu, Yusong Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Yichen Jiang, Hao Li, Xin Li, Dahua Lin, Weihao Lin, Fenghua Ling, Dongrui Liu, Zhuo Liu, Wenjie Lou, Runmin Ma, Chunjiang Mu, Haoyang Peng, Tianshuo Peng, Jinxin Shi, Luohe Shi, Boyuan Sun, Zelin Tan, Shengji Tang, Yan Teng, Qianyi Wang, Xiaosong Wang, Yiming Wu, Yi Xie, Xiangchao Yan, Jingqi Ye, Peng Ye, Fangchen Yu, Jiakang Yuan, Bihao Zhan, Bo Zhang, Chen Zhang, Shufei Zhang, Shuaiyu Zhang, Wenlong Zhang, Yiqun Zhang, Junpeng Zhao, Zhijie Zhong, Bowen Zhou, Yuhao Zhou</p>
+              <button class="author-toggle" type="button" aria-controls="agents-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2606.30616">报告</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Agents-A1">项目</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Agents-A1">模型</a></div>
+            <p class="paper-meta">技术报告 · <time datetime="2026-06">2026.06</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">Agents-A1 是一个 35B 混合专家模型，使用平均 45K token 的长程交互轨迹训练，并通过按领域路由的多教师在策略蒸馏，将六个领域的专长整合到同一个模型中。在 IFBench 上，Agents-A1 得 80.6 分，Kimi-K2.6 得 71.8 分，DeepSeek-V4-Pro（Max）得 73.5 分。</p>
+          </div>
+        </article>
+        <article class="paper" id="scicoe" data-category="other" aria-labelledby="scicoe-title">
+          <a class="paper-image" href="media/scicoe.webp">
+            <img src="media/scicoe.webp" alt="Sci-CoE 的两阶段协同训练流程" width="1100" height="521" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="scicoe-title" lang="en"><a href="https://arxiv.org/abs/2602.12164">Sci-CoE: Co-evolving Scientific Reasoning LLMs via Geometric Consensus with Sparse Supervision</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="scicoe-authors" lang="en">Xiaohan He, Shiyang Feng, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zongsheng Cao, Bin Wang, Bo Zhang</p>
+              <button class="author-toggle" type="button" aria-controls="scicoe-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2602.12164">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Sci-CoE">代码</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2026-02">2026.02</time></p>
+            <p class="paper-description">Sci-CoE 面向缺乏可验证反馈的科学推理任务，先用少量标注建立验证器的判断基础，再以兼顾共识、可靠性和多样性的几何奖励，在无标注数据上联合训练求解器与验证器。在论文 v2 的 GPQA-Diamond 评测中，Qwen3-8B 经第二阶段训练后，准确率从 61.62% 升至 65.66%。</p>
+          </div>
+        </article>
+        <article class="paper" id="internagent" data-category="report" aria-labelledby="internagent-title">
+          <a class="paper-image" href="media/intern.webp">
+            <img src="media/intern.webp" alt="InternAgent-1.5 的生成、验证与迭代流程" width="1100" height="499" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="internagent-title" lang="en"><a href="https://arxiv.org/abs/2602.08990">InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="internagent-authors" lang="en">Shiyang Feng, Runmin Ma, Xiangchao Yan, Yue Fan, Yusong Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shuaiyu Zhang, Zongsheng Cao, Tianshuo Peng, Jiakang Yuan, Zijie Guo, Zhijie Zhong, Shangheng Du, Weida Wang, Jinxin Shi, Yuhao Zhou, Xiaohan He, Zhiyin Yu, Fangchen Yu, Qihao Zheng, Jiamin Wu, Mianxin Liu, Chi Zhang, Shaowei Hou, Shuya Li, Yankai Jiang, Wenjie Lou, Lilong Wang, Zifu Wang, Jiong Wang, Wanghan Xu, Yue Deng, Dongrui Liu, Yiheng Wang, Wenlong Zhang, Fenghua Ling, Shufei Zhang, Xiaosong Wang, Shuangjia Zheng, Xun Huang, Siqi Sun, Shuyue Hu, Peng Ye, Chunfeng Song, Bin Wang, Conghui He, Yihao Liu, Xin Li, Qibin Hou, Tao Chen, Xiangyu Yue, Bin Wang, Liang He, Dahua Lin, Bowen Zhou, Bo Zhang, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="internagent-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2602.08990">报告</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/InternAgent">项目</a></div>
+            <p class="paper-meta">技术报告 · <time datetime="2026-02">2026.02</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">InternAgent-1.5 将生成、验证与演化组织成三个协同子系统，以深度调研、方案优化和长程记忆支持持续迭代。在 SGI-Bench 的 Deep Research 任务上，搭载 Gemini-3-Pro 和 o4-mini 的 InternAgent-1.5 得分为 37.74%，单独使用 Gemini-3-Pro 的对照为 18.48%。</p>
+          </div>
+        </article>
+        <article class="paper" id="landscape" data-category="other" aria-labelledby="landscape-title">
+          <a class="paper-image" href="media/landscape.webp">
+            <img src="media/landscape.webp" alt="智能体强化学习方法综述的能力分类图" width="725" height="720" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="landscape-title" lang="en"><a href="https://arxiv.org/abs/2509.02547">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="landscape-authors" lang="en">Guibin Zhang, Hejia Geng, Xiaohang Yu, Zhenfei Yin, Zaibin Zhang, Zelin Tan, Heng Zhou, Zhongzhi Li, Xiangyuan Xue, Yijiang Li, Yifan Zhou, Yang Chen, Chen Zhang, Yutao Fan, Zihu Wang, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Francisco Piedrahita-Velez, Yue Liao, Hongru Wang, Mengyue Yang, Heng Ji, Jun Wang, Shuicheng Yan, Philip Torr, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="landscape-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2509.02547">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers">文献列表</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2025-09">2025.09</time></p>
+            <p class="paper-description">这篇综述以部分可观测马尔可夫决策过程刻画大模型智能体的多步交互，并按核心能力与应用领域两个维度梳理 500 余项研究。文章覆盖规划、工具调用、记忆和自我改进等能力，并汇总开源环境、基准和训练框架。</p>
+          </div>
+        </article>
+        <article class="paper" id="internagent-original" data-category="other" aria-labelledby="internagent-original-title">
+          <a class="paper-image" href="media/internagent-original.webp">
+            <img src="media/internagent-original.webp" alt="InternAgent 从假设到实验验证的闭环流程" width="897" height="690" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="internagent-original-title" lang="en"><a href="https://arxiv.org/abs/2505.16938">InternAgent: When Agent Becomes the Scientist -- Building Closed-Loop System from Hypothesis to Verification</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="internagent-original-authors" lang="en">InternAgent Team, Bo Zhang, Shiyang Feng, Xiangchao Yan, Jiakang Yuan, Runmin Ma, Yusong Hu, Zhiyin Yu, Xiaohan He, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shaowei Hou, Zheng Nie, Zhilong Wang, Jinyao Liu, Tianshuo Peng, Peng Ye, Dongzhan Zhou, Shufei Zhang, Xiaosong Wang, Yilan Zhang, Meng Li, Zhongying Tu, Xiangyu Yue, Wangli Ouyang, Bowen Zhou, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="internagent-original-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2505.16938">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/Alpha-Innovator/NovelSeek">代码</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2025-05">2025.05</time></p>
+            <p class="paper-description">InternAgent 是一个连接研究假设、方法设计与实验验证的闭环多智能体框架，允许领域专家在端到端流程中提供反馈。论文评估了 12 类科研任务，其中二维语义分割任务 Auto2DSeg 的最佳方案将 DeepLabV3+ 基线的 mIoU 从 78.8% 提高到 81.0%。</p>
+          </div>
+        </article>
+        <article class="paper featured" id="rewardcode" data-category="first" aria-labelledby="rewardcode-title">
+          <a class="paper-image" href="media/rewardcode-figure-2.webp">
+            <img src="media/rewardcode-figure-2.webp" alt="RewardCode Figure 2，CodePair-18K 的构建与成对强化学习流程" width="1732" height="1220" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="rewardcode-title" lang="en"><a href="https://aclanthology.org/2026.findings-emnlp.448/">RewardCode: Training Generalist Code Reward Model via Pairwise Reinforcement Learning</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="rewardcode-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shiyang Feng, Xiaohan He, Xiangchao Yan, Bo Zhang, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="rewardcode-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://aclanthology.org/2026.findings-emnlp.448/">论文</a></div>
+            <p class="paper-meta">Findings of EMNLP 2026</p>
+            <p class="paper-description">RewardCode 将基于准则的评分与可执行单元测试结合，用 CodePair-18K 中的代码偏好对和单元测试训练通用代码奖励模型，并用 Pairwise-GRPO 联合优化评分与测试生成。在 RewardBench-Code 上，RewardCode-7B 的偏好选择准确率为 94.9%，RM-R1-Qwen2.5-Inst-7B 为 88.8%。</p>
+          </div>
+        </article>
+        <article class="paper featured" id="timekan" data-category="first" aria-labelledby="timekan-title">
+          <a class="paper-image" href="media/timekan.webp">
+            <img src="media/timekan.webp" alt="TimeKAN 的频率分解、频带建模和预测重建架构" width="840" height="288" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="timekan-title" lang="en"><a href="https://arxiv.org/abs/2502.06910">TimeKAN: KAN-based Frequency Decomposition Learning Architecture for Long-term Time Series Forecasting</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="timekan-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zhen Zhao, Can Li, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="timekan-authors" aria-expanded="false" aria-label="展开作者列表" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2502.06910">论文</a> <span aria-hidden="true">/</span> <a href="https://github.com/huangst21/TimeKAN">代码</a></div>
+            <p class="paper-meta">ICLR 2025</p>
+            <p class="paper-description">TimeKAN 以级联分解提取各频带的表示，用多阶 Kolmogorov–Arnold 网络分别建模，再融合各频带的预测。在 ETTh1 上，对 96、192、336 和 720 步预测取平均，TimeKAN 的 MSE 为 0.417，MAE 为 0.427，TimeMixer 的对应数值为 0.459 和 0.444。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">研究经历</h2>
+      <article class="experience">
+        <img class="experience-logo" src="media/shanghai-ai-lab-logo.png" alt="" width="2066" height="1190" loading="lazy">
+        <div class="experience-details">
+          <h3>上海人工智能实验室</h3>
+          <p class="experience-role" lang="en">Research Intern · Agent System Center</p>
+        </div>
+        <p class="experience-date"><time datetime="2025-04">2025.04</time> 至今</p>
+      </article>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <img src="media/mountain.webp" alt="" loading="lazy">
+    <h2>联系我</h2>
+    <a class="footer-contact" href="mailto:huangsongtao@pjlab.org.cn">发送邮件</a>
+    <p>Songtao Huang（黄松涛）</p>
+  </footer>
+  <dialog class="figure-dialog" aria-labelledby="figure-caption">
+    <button class="figure-close" type="button" aria-label="关闭配图" autofocus>×</button>
+    <figure>
+      <img class="figure-full" alt="">
+      <figcaption id="figure-caption"></figcaption>
+    </figure>
+  </dialog>
+  <a class="back-to-top" href="#about" aria-label="返回顶部" hidden>↑</a>
+</body>
+</html>

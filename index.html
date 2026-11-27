@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Songtao Huang（黄松涛）’s academic homepage. Research interests include long-horizon agents, agents for real-world work, and recursive self-improvement of agents and their training environments.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Songtao Huang（黄松涛）</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="homepage.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to main content</a>
+
+  <nav class="section-nav" aria-label="Section navigation">
+    <a href="#about" aria-current="location">About</a>
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+  </nav>
+
+  <main class="page">
+    <nav class="language-switch" aria-label="Page language">
+      <a href="./zh.html" lang="zh-CN" hreflang="zh-CN">中文</a>
+      <span aria-current="page">English</span>
+    </nav>
+    <header class="profile" id="about">
+      <div class="profile-content">
+        <h1><span lang="en">Songtao Huang</span><span lang="zh-CN">（黄松涛）</span></h1>
+        <p>Hi, welcome to my academic homepage! I’m a second-year Ph.D. student at Fudan University, advised by Wanli Ouyang. I’m fortunate to conduct research at Shanghai AI Laboratory, where I work closely with Shiyang Feng and Bo Zhang.</p>
+        <p class="bio">I’m interested in how to improve agents’ performance on long-horizon tasks, particularly for real-world work where agents can improve productivity. I’m also interested in recursive self-improvement (RSI) and how agents and their training environments can help each other improve over successive iterations.</p>
+        <div class="profile-links" aria-label="Contact and profile links">
+          <a href="mailto:huangsongtao@pjlab.org.cn">Email<span class="email-address">huangsongtao@pjlab.org.cn</span></a>
+          <span aria-hidden="true">/</span>
+          <a href="https://scholar.google.com/citations?user=_vXl5VAAAAAJ">Google Scholar</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/huangst21">GitHub</a>
+        </div>
+      </div>
+      <img class="profile-photo" src="media/profile-photo.webp" alt="Photo of Songtao Huang（黄松涛）" width="840" height="521">
+    </header>
+
+    <section class="section" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="news-list">
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#rewardcode">RewardCode</a> appeared in <strong>Findings of EMNLP 2026</strong>. It uses pairwise reinforcement learning to train a general-purpose code reward model that scores code and generates executable unit tests.</span></li>
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#sage">Sage-A1.5</a> was released. It shows how a 35B agent can adaptively combine task orchestration and verification to extend long-horizon execution to open-ended scientific exploration.</span></li>
+        <li><time datetime="2026-10">2026.10</time> <span><a href="#longharness">LongHarness</a> was released as a preprint. By updating evidence and conclusions together, it lets agents reason over corpora on the order of 100 million tokens, beyond the model’s context window.</span></li>
+        <li><time datetime="2026-06">2026.06</time> <span><a href="#agents">Agents-A1</a> was released. Training on longer interaction trajectories and distilling expertise across six domains lets a 35B model match trillion-parameter models on several long-horizon benchmarks.</span></li>
+        <li><time datetime="2026-02">2026.02</time> <span><a href="#internagent">InternAgent-1.5</a> was released. It brings generation, verification, and evolution into one framework for end-to-end research, from algorithm design to empirical discovery.</span></li>
+        <li><time datetime="2025-05">2025.05</time> <span><a href="#internagent-original">InternAgent</a> was released as a preprint. It evaluates a closed-loop multi-agent framework that incorporates expert feedback across 12 types of research tasks.</span></li>
+        <li><time datetime="2025-01">2025.01</time> <span><a href="#timekan">TimeKAN</a> was accepted to <strong>ICLR 2025</strong>.</span></li>
+      </ul>
+    </section>
+
+    <section class="section" id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <p class="publications-intro">First-author papers are <mark>highlighted in pale yellow</mark>. See the full list on <a href="https://scholar.google.com/citations?user=_vXl5VAAAAAJ">Google Scholar</a>.</p>
+      <div class="filters" role="group" aria-label="Filter publications" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">All<span class="tag-count" aria-hidden="true">9</span></button>
+        <button type="button" data-filter="first" aria-pressed="false">First Author<span class="tag-count" aria-hidden="true">3</span></button>
+        <button type="button" data-filter="report" aria-pressed="false">Core Contributor Reports<span class="tag-count" aria-hidden="true">3</span></button>
+      </div>
+      <p id="filter-status" class="sr-only" role="status"></p>
+      <div class="paper-list">
+        <article class="paper" id="sage" data-category="report" aria-labelledby="sage-title">
+          <a class="paper-image" href="media/sage.webp">
+            <img src="media/sage.webp" alt="Three-stage training pipeline for Sage-A1.5" width="1800" height="960" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="sage-title" lang="en"><a href="https://arxiv.org/abs/2610.28578">Sage-A1.5: From Long-Horizon Execution to Scientific Exploration with Capability Composition</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="sage-authors" lang="en">Wenjie Lou, Tianshuo Peng, Shiyang Feng, Shengji Tang, Runmin Ma, Ruizhe Chen, Jinxin Shi, Haoyang Peng, Fangchen Yu, Zhijie Zhong, Yuhao Zhou, Yue Fan, Yixin Chen, Yiming Wu, Yiheng Wang, Yigeng Jiang, Yichen Jiang, Yi Xie, Xu Guo, Xiaohan He, Tao Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Siyu Zhou, Shuaiyu Zhang, Shangheng Du, Qinglong Cao, Kun Li, Jingqi Ye, Hongbin Zhou, Guohang Yan, Zongsheng Cao, Ziyi Wang, Zhuo Liu, Zhiyin Yu, Zhiwang Zhou, Zelin Tan, Yuqing Zhu, Yaoze Zhang, Yang Chen, Xuming He, Xiuliang Liang, Xingjian Guo, Xiang Zhuang, Weiping Shen, Weida Wang, Tianyuan Zhou, Tianlin Ye, Tengyuan Fan, Siyu Yan, Shuo Li, Shuchen Pu, Shengyuan Xu, Shao Zhang, Ran Wei, Qinyuan Qin, Qingyu Yang, Nianchen Deng, Meng Dai, Kuikun Liu, Kaitao Chen, Juncheng Xiao, Jiangning Liu, Jianbiao Mei, Jia Yu, Haonan He, Hangfan Zhang, Cheng Yang, Chen Zhang, Bihao Zhan, Benteng Cheng, Yuqiang Li, Yihao Liu, Yang Yang, Xujun Fu, Xiaosong Wang, Xiangyu Yue, Wenwei Zhang, Shuyue Hu, Pinlong Cai, Mianxin Liu, Lei Bai, Jie Zhou, Jie Hou, Jiamin Wu, Hui Wang, Haijun Li, Guangyu Wang, Dongzhan Zhou, Chunfeng Song, Chao Yang, Biqing Qi, Xing Xie, Dahua Lin, Bowen Zhou, Xiangchao Yan, Wenlong Zhang, Shufei Zhang, Peng Ye, Bo Zhang</p>
+              <button class="author-toggle" type="button" aria-controls="sage-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2610.28578">Report</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Sage-A1.5">Model</a></div>
+            <p class="paper-meta">Technical Report · <time datetime="2026-10">2026.10</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">Sage-A1.5 is a 35B mixture-of-experts model that runs subtasks in parallel using subagents with separate contexts. It monitors progress and checks evidence to revise its search strategy. Enabling subagent orchestration with the same model raised its DeepResearch Bench II score from 43.7 to 47.5 and its BrowseComp accuracy from 81.7% to 82.8%.</p>
+          </div>
+        </article>
+        <article class="paper featured" id="longharness" data-category="first" aria-labelledby="longharness-title">
+          <a class="paper-image" href="media/longharness-figure-2.webp">
+            <img src="media/longharness-figure-2.webp" alt="LongHarness Figure 2, joint updates to the evidence store and conclusion state" width="1912" height="1160" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="longharness-title" lang="en"><a href="https://arxiv.org/abs/2610.13075">LongHarness: Advancing Agentic Reasoning over 100M-Token Corpora via Stateful Evidence Management</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="longharness-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zhijie Zhong, Xiaohan He, Shuaiyu Zhang, Zhiyin Yu, Li Kang, Heng Zhou, Yutao Fan, Xiangchao Yan, Bo Zhang, Shiyang Feng</p>
+              <button class="author-toggle" type="button" aria-controls="longharness-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2610.13075">Paper</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2026-10">2026.10</time></p>
+            <p class="paper-description">LongHarness supports reasoning over corpora that exceed the model’s context window by explicitly maintaining retrieved evidence and evolving conclusions. Gaps in the current conclusions guide what to retrieve next, and new evidence strengthens or revises those conclusions. Tracking the evidence lifecycle makes updates traceable. With the same GLM-5.3-Flash model, exact match on OfficeQA Pro V1 and V2 was 60.2% and 61.1% for LongHarness, 46.6% and 42.2% for Codex, and 48.1% and 35.6% for Claude Code, respectively.</p>
+          </div>
+        </article>
+        <article class="paper" id="agents" data-category="report" aria-labelledby="agents-title">
+          <a class="paper-image" href="media/agents.webp">
+            <img src="media/agents.webp" alt="Multi-domain teacher training and distillation pipeline for Agents-A1" width="1800" height="1008" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="agents-title" lang="en"><a href="https://arxiv.org/abs/2606.30616">Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="agents-authors" lang="en">Lei Bai, Zongsheng Cao, Yang Chen, Zhiyao Cui, Shangheng Du, Yue Fan, Shiyang Feng, Zijie Guo, Haonan He, Liang He, Xiaohan He, Shuyue Hu, Yusong Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Yichen Jiang, Hao Li, Xin Li, Dahua Lin, Weihao Lin, Fenghua Ling, Dongrui Liu, Zhuo Liu, Wenjie Lou, Runmin Ma, Chunjiang Mu, Haoyang Peng, Tianshuo Peng, Jinxin Shi, Luohe Shi, Boyuan Sun, Zelin Tan, Shengji Tang, Yan Teng, Qianyi Wang, Xiaosong Wang, Yiming Wu, Yi Xie, Xiangchao Yan, Jingqi Ye, Peng Ye, Fangchen Yu, Jiakang Yuan, Bihao Zhan, Bo Zhang, Chen Zhang, Shufei Zhang, Shuaiyu Zhang, Wenlong Zhang, Yiqun Zhang, Junpeng Zhao, Zhijie Zhong, Bowen Zhou, Yuhao Zhou</p>
+              <button class="author-toggle" type="button" aria-controls="agents-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2606.30616">Report</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Agents-A1">Project</a> <span aria-hidden="true">/</span> <a href="https://huggingface.co/InternScience/Agents-A1">Model</a></div>
+            <p class="paper-meta">Technical Report · <time datetime="2026-06">2026.06</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">Agents-A1 is a 35B mixture-of-experts model trained on long-horizon interaction trajectories averaging 45K tokens. It combines expertise from six domains in a single model through domain-routed, multi-teacher on-policy distillation. On IFBench, Agents-A1 scored 80.6, compared with 71.8 for Kimi-K2.6 and 73.5 for DeepSeek-V4-Pro (Max).</p>
+          </div>
+        </article>
+        <article class="paper" id="scicoe" data-category="other" aria-labelledby="scicoe-title">
+          <a class="paper-image" href="media/scicoe.webp">
+            <img src="media/scicoe.webp" alt="Two-stage co-training pipeline for Sci-CoE" width="1100" height="521" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="scicoe-title" lang="en"><a href="https://arxiv.org/abs/2602.12164">Sci-CoE: Co-evolving Scientific Reasoning LLMs via Geometric Consensus with Sparse Supervision</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="scicoe-authors" lang="en">Xiaohan He, Shiyang Feng, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zongsheng Cao, Bin Wang, Bo Zhang</p>
+              <button class="author-toggle" type="button" aria-controls="scicoe-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2602.12164">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/Sci-CoE">Code</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2026-02">2026.02</time></p>
+            <p class="paper-description">Sci-CoE addresses scientific reasoning tasks where verifiable feedback is scarce. It first trains a verifier on a small labeled set, then uses a geometric reward that balances consensus, reliability, and diversity to jointly train the solver and verifier on unlabeled data. In the GPQA-Diamond evaluation reported in v2, Qwen3-8B accuracy rose from 61.62% to 65.66% after the second training stage.</p>
+          </div>
+        </article>
+        <article class="paper" id="internagent" data-category="report" aria-labelledby="internagent-title">
+          <a class="paper-image" href="media/intern.webp">
+            <img src="media/intern.webp" alt="Generation, verification, and iteration in InternAgent-1.5" width="1100" height="499" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="internagent-title" lang="en"><a href="https://arxiv.org/abs/2602.08990">InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="internagent-authors" lang="en">Shiyang Feng, Runmin Ma, Xiangchao Yan, Yue Fan, Yusong Hu, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shuaiyu Zhang, Zongsheng Cao, Tianshuo Peng, Jiakang Yuan, Zijie Guo, Zhijie Zhong, Shangheng Du, Weida Wang, Jinxin Shi, Yuhao Zhou, Xiaohan He, Zhiyin Yu, Fangchen Yu, Qihao Zheng, Jiamin Wu, Mianxin Liu, Chi Zhang, Shaowei Hou, Shuya Li, Yankai Jiang, Wenjie Lou, Lilong Wang, Zifu Wang, Jiong Wang, Wanghan Xu, Yue Deng, Dongrui Liu, Yiheng Wang, Wenlong Zhang, Fenghua Ling, Shufei Zhang, Xiaosong Wang, Shuangjia Zheng, Xun Huang, Siqi Sun, Shuyue Hu, Peng Ye, Chunfeng Song, Bin Wang, Conghui He, Yihao Liu, Xin Li, Qibin Hou, Tao Chen, Xiangyu Yue, Bin Wang, Liang He, Dahua Lin, Bowen Zhou, Bo Zhang, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="internagent-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2602.08990">Report</a> <span aria-hidden="true">/</span> <a href="https://github.com/InternScience/InternAgent">Project</a></div>
+            <p class="paper-meta">Technical Report · <time datetime="2026-02">2026.02</time> <span class="core-contributor" lang="en">Core Contributor</span></p>
+            <p class="paper-description">InternAgent-1.5 organizes generation, verification, and evolution into three cooperating subsystems. Deep research, refinement of candidate solutions, and long-horizon memory support iterative improvement. On the SGI-Bench Deep Research task, InternAgent-1.5 using Gemini-3-Pro and o4-mini scored 37.74%, compared with 18.48% for Gemini-3-Pro alone.</p>
+          </div>
+        </article>
+        <article class="paper" id="landscape" data-category="other" aria-labelledby="landscape-title">
+          <a class="paper-image" href="media/landscape.webp">
+            <img src="media/landscape.webp" alt="Taxonomy of agent capabilities in the survey on reinforcement learning for LLM agents" width="725" height="720" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="landscape-title" lang="en"><a href="https://arxiv.org/abs/2509.02547">The Landscape of Agentic Reinforcement Learning for LLMs: A Survey</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="landscape-authors" lang="en">Guibin Zhang, Hejia Geng, Xiaohang Yu, Zhenfei Yin, Zaibin Zhang, Zelin Tan, Heng Zhou, Zhongzhi Li, Xiangyuan Xue, Yijiang Li, Yifan Zhou, Yang Chen, Chen Zhang, Yutao Fan, Zihu Wang, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Francisco Piedrahita-Velez, Yue Liao, Hongru Wang, Mengyue Yang, Heng Ji, Jun Wang, Shuicheng Yan, Philip Torr, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="landscape-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2509.02547">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/xhyumiracle/Awesome-AgenticLLM-RL-Papers">Reading List</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2025-09">2025.09</time></p>
+            <p class="paper-description">This survey frames multi-step interaction by LLM agents as a partially observable Markov decision process. It organizes more than 500 studies by core capability and application domain, covering planning, tool use, memory, and self-improvement. It also catalogs open-source environments, benchmarks, and training frameworks.</p>
+          </div>
+        </article>
+        <article class="paper" id="internagent-original" data-category="other" aria-labelledby="internagent-original-title">
+          <a class="paper-image" href="media/internagent-original.webp">
+            <img src="media/internagent-original.webp" alt="The InternAgent research loop from hypothesis to experimental validation" width="897" height="690" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="internagent-original-title" lang="en"><a href="https://arxiv.org/abs/2505.16938">InternAgent: When Agent Becomes the Scientist -- Building Closed-Loop System from Hypothesis to Verification</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="internagent-original-authors" lang="en">InternAgent Team, Bo Zhang, Shiyang Feng, Xiangchao Yan, Jiakang Yuan, Runmin Ma, Yusong Hu, Zhiyin Yu, Xiaohan He, <strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shaowei Hou, Zheng Nie, Zhilong Wang, Jinyao Liu, Tianshuo Peng, Peng Ye, Dongzhan Zhou, Shufei Zhang, Xiaosong Wang, Yilan Zhang, Meng Li, Zhongying Tu, Xiangyu Yue, Wangli Ouyang, Bowen Zhou, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="internagent-original-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2505.16938">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/Alpha-Innovator/NovelSeek">Code</a></div>
+            <p class="paper-meta">arXiv · <time datetime="2025-05">2025.05</time></p>
+            <p class="paper-description">InternAgent is a closed-loop multi-agent framework that connects hypothesis formation, method design, and experimental validation, with domain experts able to provide feedback throughout. The paper evaluates 12 types of research tasks. On Auto2DSeg, a 2D semantic segmentation task, the best solution improved the DeepLabV3+ baseline mIoU from 78.8% to 81.0%.</p>
+          </div>
+        </article>
+        <article class="paper featured" id="rewardcode" data-category="first" aria-labelledby="rewardcode-title">
+          <a class="paper-image" href="media/rewardcode-figure-2.webp">
+            <img src="media/rewardcode-figure-2.webp" alt="RewardCode Figure 2, CodePair-18K construction and pairwise reinforcement learning" width="1732" height="1220" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="rewardcode-title" lang="en"><a href="https://aclanthology.org/2026.findings-emnlp.448/">RewardCode: Training Generalist Code Reward Model via Pairwise Reinforcement Learning</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="rewardcode-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Shiyang Feng, Xiaohan He, Xiangchao Yan, Bo Zhang, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="rewardcode-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://aclanthology.org/2026.findings-emnlp.448/">Paper</a></div>
+            <p class="paper-meta">Findings of EMNLP 2026</p>
+            <p class="paper-description">RewardCode combines rubric-based scoring with executable unit tests. It trains a general-purpose code reward model on the code preference pairs and unit tests in CodePair-18K and jointly optimizes scoring and test generation with Pairwise-GRPO. On RewardBench-Code, RewardCode-7B achieved 94.9% preference selection accuracy, compared with 88.8% for RM-R1-Qwen2.5-Inst-7B.</p>
+          </div>
+        </article>
+        <article class="paper featured" id="timekan" data-category="first" aria-labelledby="timekan-title">
+          <a class="paper-image" href="media/timekan.webp">
+            <img src="media/timekan.webp" alt="TimeKAN architecture for frequency decomposition, frequency-band modeling, and forecast reconstruction" width="840" height="288" loading="lazy">
+          </a>
+          <div class="paper-content">
+            <h3 id="timekan-title" lang="en"><a href="https://arxiv.org/abs/2502.06910">TimeKAN: KAN-based Frequency Decomposition Learning Architecture for Long-term Time Series Forecasting</a></h3>
+            <div class="author-row">
+              <p class="paper-authors" id="timekan-authors" lang="en"><strong>Songtao Huang<span lang="zh-CN">（黄松涛）</span></strong>, Zhen Zhao, Can Li, Lei Bai</p>
+              <button class="author-toggle" type="button" aria-controls="timekan-authors" aria-expanded="false" aria-label="Expand author list" hidden>⌄</button>
+            </div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2502.06910">Paper</a> <span aria-hidden="true">/</span> <a href="https://github.com/huangst21/TimeKAN">Code</a></div>
+            <p class="paper-meta">ICLR 2025</p>
+            <p class="paper-description">TimeKAN uses cascaded decomposition to extract representations for different frequency bands, models them with multi-order Kolmogorov–Arnold networks, and combines the band-level forecasts. On ETTh1, averaged over 96-, 192-, 336-, and 720-step forecast horizons, TimeKAN achieved an MSE of 0.417 and an MAE of 0.427, compared with 0.459 and 0.444 for TimeMixer.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Research Experience</h2>
+      <article class="experience">
+        <img class="experience-logo" src="media/shanghai-ai-lab-logo.png" alt="" width="2066" height="1190" loading="lazy">
+        <div class="experience-details">
+          <h3>Shanghai AI Laboratory</h3>
+          <p class="experience-role" lang="en">Research Intern · Agent System Center</p>
+        </div>
+        <p class="experience-date"><time datetime="2025-04">Apr 2025</time> – Present</p>
+      </article>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <img src="media/mountain.webp" alt="" loading="lazy">
+    <h2>Contact</h2>
+    <a class="footer-contact" href="mailto:huangsongtao@pjlab.org.cn">Send Email</a>
+    <p>Songtao Huang（黄松涛）</p>
+  </footer>
+  <dialog class="figure-dialog" aria-labelledby="figure-caption">
+    <button class="figure-close" type="button" aria-label="Close figure" autofocus>×</button>
+    <figure>
+      <img class="figure-full" alt="">
+      <figcaption id="figure-caption"></figcaption>
+    </figure>
+  </dialog>
+  <a class="back-to-top" href="#about" aria-label="Back to top" hidden>↑</a>
+</body>
+</html>
